@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    overflow: hidden;
+}
+ canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.canvas-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Behind the slider */
+    pointer-events: none; /* Prevents interactions if necessary */
+}
+
+ img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slideContainer a, .slideContainer p {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Akkurat Mono", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.slideContainer {
+    width: 100%;
+    height: 1600vh;
+    overflow: hidden;
+    position: relative;
+    /* background: #fff; */
+}
+
+.slider {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.slide {
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    will-change: transform, opacity;
+}
+
+.slide-img {
+    width: 100%;
+    height: 100%;
+    padding: 0.5em;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+}
+
+.slide-copy {
+    position: absolute;
+    width: 100%;
+    bottom: -24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slideOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    background: radial-gradient(
+        circle,
+        rgba(0, 0, 0, 0) 60%,
+        rgba(0, 0, 0, 1) 100%
+    );
+}
+
+/* html.lenis, html.lenis body {
+    height: auto;
+  } */
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
+  }
+
+  .anotherSection {
+    width: 100vw;
+    height: 100vh;
+    background-color: aquamarine;
+  }
